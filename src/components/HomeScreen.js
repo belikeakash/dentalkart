@@ -8,8 +8,7 @@ export default function CsvReader() {
     const [csvArray, setCsvArray] = useState([]);
     const [headers, setHeaders] = useState([]);
     let YOURJSON = [];
-    // [{name: "", age: 0, rank: ""},{name: "", age: 0, rank: ""}]
-
+    //-> FUNCTION TO CONVERT CSV TO JSON
     const processCSV = (csvfile) => {
         const arr = csvfile.toString().split("\n")
         var jsonObject = [];
@@ -28,6 +27,8 @@ export default function CsvReader() {
         setCsvArray(jsonObject)
         localStorage.setItem('students', YOURJSON)
     }
+
+    //-> FUNCTION TO DOWNLOAD THE JSON FILE
     const exportData = () => {
         const xdata = localStorage.getItem('students');
         if (xdata == null) { alert('No DATA STORED'); return; }
@@ -42,6 +43,8 @@ export default function CsvReader() {
 
         link.click();
     };
+
+    
     const submit = () => {
         const file = csvFile;
         const reader = new FileReader();
@@ -54,15 +57,13 @@ export default function CsvReader() {
 
         reader.readAsText(file);
     }
-
+    //-> REF TO FOCUS ON THE INPUT WHOSE VISIBLITY IS HIDDEN
     function focus() {
         refc.current.click();
     }
 
     return (
         <>
-
-
             <div className="home-main">
                 <div className="home-top"><div className="home-title">Students</div>
                     <div className="home-buttons">
