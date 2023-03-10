@@ -20,7 +20,7 @@ export default function Login() {
             const jwtToken = email + password + salt + password;
             localStorage.setItem('authToken', jwtToken);
             sessionStorage.setItem('authToken', jwtToken)
-            navigate('/');
+            navigate('/home');
         }
         else {
             setPassword('')

@@ -8,8 +8,8 @@ function App() {
     <div className="App">
       <Router>
       <Routes>
-          <Route expath path = '/' element={<HomeScreen/>} />
-          <Route expath path = '/login' element={<Login/>} />
+          <Route expath path = '/home' element={<HomeScreen/>} />
+          <Route expath path = '/' element={<Login/>} />
       </Routes>
       </Router>
     </div>
