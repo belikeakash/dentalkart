@@ -1,4 +1,6 @@
 # Getting Started with Create React App
+Installation of react-router-dom is necessary for routing and navigation
+Hooks used - useState, useRef, useNavigation
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
